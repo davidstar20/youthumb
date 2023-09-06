@@ -27,7 +27,7 @@ class MyDocument extends Document {
             {`
               .title-container {
                 padding: 20px;
-                background-color: #4CAF50;
+                background-color: #FF0000;  /* YouTube red color */
                 color: white;
                 text-align: center;
                 margin: 20px;
@@ -39,13 +39,12 @@ class MyDocument extends Document {
               }
               .example {
                 font-size: 14px;
-                color: #E0E0E0;
+                color: #E0E0E0;  /* Lighter color for contrast */
               }
             `}
           </style>
         </Head>
         <body>
-          <Main />
           <div className="title-container">
             <div className="title">
               Capture and download thumbnail images from your favorite videos! <strong>For free and fast</strong>.
@@ -54,6 +53,7 @@ class MyDocument extends Document {
               Example: https://www.youtube.com/watch?v=5dbEhBKGOtY
             </div>
           </div>
+          <Main />
           <NextScript />
         </body>
       </Html>
