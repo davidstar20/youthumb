@@ -30,7 +30,7 @@ class MyDocument extends Document {
                 background-color: #FF0000;  /* YouTube red color */
                 color: white;
                 text-align: center;
-                margin: 20px;
+                margin: 10px 20px 20px 20px;  /* Reduced top margin */
                 border-radius: 5px;
               }
               .title {
