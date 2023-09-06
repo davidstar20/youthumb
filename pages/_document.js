@@ -56,7 +56,8 @@ class MyDocument extends Document {
             Content for finding video tags.
           </div>
           <div id="privacy" className="tab-content">
-            Your privacy policy content.
+            <h2>Privacy Policy for YouTube Thumbnail Download</h2>
+            ... [All your provided content here]
           </div>
           <NextScript />
           <script>
