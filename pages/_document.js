@@ -1,55 +1,3 @@
-import React, { useState } from 'react';
-
-export default function HomePage() {
-  const [activeTab, setActiveTab] = useState('download');
-
-  return (
-    <div>
-      <div className="tabs">
-        <button onClick={() => setActiveTab('download')}>Download Thumbnail</button>
-        <button onClick={() => setActiveTab('tags')}>Find Video Tags</button>
-        <button onClick={() => setActiveTab('privacy')}>Privacy Policy</button>
-      </div>
-
-      {activeTab === 'download' && (
-        <div className="tab-content">
-          Content for downloading thumbnails.
-        </div>
-      )}
-
-      {activeTab === 'tags' && (
-        <div className="tab-content">
-          Content for finding video tags.
-        </div>
-      )}
-
-      {activeTab === 'privacy' && (
-        <div className="tab-content">
-          <h2>Privacy Policy for YouTube Thumbnail Download</h2>
-          ... [All your provided content here]
-        </div>
-      )}
-
-      <style jsx>{`
-        .tabs {
-          display: flex;
-          justify-content: space-around;
-          padding: 10px;
-          background-color: #f5f5f5;
-        }
-        .tab-content {
-          padding: 20px;
-          background-color: #e9e9e9;
-        }
-      `}</style>
-    </div>
-  );
-}
-
-
-
-
-
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -75,52 +23,10 @@ class MyDocument extends Document {
             href="/favicon/favicon-16x16.png"
           />
           <link rel="manifest" href="/favicon/site.webmanifest" />
-          <style>
-            {`
-              .tabs {
-                display: flex;
-                justify-content: space-around;
-                padding: 10px;
-                background-color: #f5f5f5;
-              }
-              .tab-content {
-                display: none;
-                padding: 20px;
-                background-color: #e9e9e9;
-              }
-              .active {
-                display: block;
-              }
-            `}
-          </style>
         </Head>
         <body>
           <Main />
-          <div className="tabs">
-            <button onClick={() => this.showTab('download')}>Download Thumbnail</button>
-            <button onClick={() => this.showTab('tags')}>Find Video Tags</button>
-            <button onClick={() => this.showTab('privacy')}>Privacy Policy</button>
-          </div>
-          <div id="download" className="tab-content">
-            Content for downloading thumbnails.
-          </div>
-          <div id="tags" className="tab-content">
-            Content for finding video tags.
-          </div>
-          <div id="privacy" className="tab-content">
-            <h2>Privacy Policy for YouTube Thumbnail Download</h2>
-            ... [All your provided content here]
-          </div>
           <NextScript />
-          <script>
-            {`
-              function showTab(tabId) {
-                const contents = document.querySelectorAll('.tab-content');
-                contents.forEach(content => content.classList.remove('active'));
-                document.getElementById(tabId).classList.add('active');
-              }
-            `}
-          </script>
         </body>
       </Html>
     );
@@ -128,3 +34,5 @@ class MyDocument extends Document {
 }
 
 export default MyDocument;
+
+
